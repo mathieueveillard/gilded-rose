@@ -25,23 +25,18 @@ export class GildedRose {
   }
 
   updateQuality() {
-    this.items.forEach((item) => {
+    this.items.forEach((item: Item) => {
       switch (item.name) {
         case ItemsName.AgedBrie:
-          this.updateItemQuality(item, true);
+          this.updateItemQuality(item, true, item.sellIn <= 0 ? 2 : 1);
           break;
         case ItemsName.BackstagePasses:
-          if (item.sellIn < 0) {
+          if (item.sellIn <= 0) {
             item.quality = 0;
             break;
           }
-          this.updateItemQuality(item, true);
-          if (item.sellIn < 11) {
-            this.updateItemQuality(item, true);
-          }
-          if (item.sellIn <= 5) {
-            this.updateItemQuality(item, true);
-          }
+          const value = item.sellIn <= 5 ? 3 : item.sellIn <= 10 ? 2 : 1;
+          this.updateItemQuality(item, true, value);
           break;
         case ItemsName.Sulfuras:
           item.quality = 80;
@@ -50,18 +45,19 @@ export class GildedRose {
           this.updateItemQuality(item, false, 2);
           break;
         default:
-          this.updateItemQuality(item, false);
+          this.updateItemQuality(item, false, item.sellIn <= 0 ? 2 : 1);
           break;
       }
+      item.name !== ItemsName.Sulfuras && item.sellIn--;
     });
     return this.items;
   }
 
-  private updateItemQuality(item: Item, increas: boolean, value = 1) {
-    increas
-      ? (item.quality = item.quality < 50 ? item.quality + value : item.quality)
-      : item.quality > 0
-      ? item.quality - value
-      : item.quality;
+  private updateItemQuality(item: Item, increaseQuality: boolean, value = 1) {
+    if (increaseQuality) {
+      item.quality = Math.min(50, item.quality + value);
+    } else {
+      item.quality = Math.max(0, item.quality - value);
+    }
   }
 }
