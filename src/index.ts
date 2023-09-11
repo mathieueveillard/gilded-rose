@@ -11,6 +11,30 @@ export class GildedRose {
     this.items = items;
   }
 
+  private updateNormalItem(item: Item) {
+    if (item.quality > 0) {
+      item.quality -= 1;
+    }
+  }
+
+  private updateAgedBrie(item: Item) {
+    if (item.quality < MAX_QUALITY) {
+      item.quality += 1;
+    }
+  }
+
+  private updateBackstagePasses(item: Item) {
+    if (item.quality < MAX_QUALITY) {
+      item.quality += 1;
+      if (item.sellIn < 11 && item.quality < MAX_QUALITY) {
+        item.quality += 1;
+      }
+      if (item.sellIn < 6 && item.quality < MAX_QUALITY) {
+        item.quality += 1;
+      }
+    }
+  }
+
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i].name != "Aged Brie" && this.items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
