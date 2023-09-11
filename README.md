@@ -5,6 +5,7 @@
 - Alexandre GRODENT
 - Hassan AIDIBE
 - Anne MICHAUD
+- Juba Ait-Adda
 
 ## Specification
 
