@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gilded Rose Doit augmenter la qualité de 2 pour les Passes Backstage lorsque le sellIn est de 10 ou moins 1`] = `
+[
+  "Pour chaque objet avec: Backstage passes to a TAFKAL80ETC concert 10 20",
+  "Si l'objet est un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet est un Backstage passes to a TAFKAL80ETC concert",
+  "Si le sellIn est inférieur à 11",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+]
+`;
+
+exports[`Gilded Rose Doit augmenter la qualité de 3 pour les Passes Backstage lorsque le sellIn est de 5 ou moins 1`] = `
+[
+  "Pour chaque objet avec: Backstage passes to a TAFKAL80ETC concert 5 20",
+  "Si l'objet est un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet est un Backstage passes to a TAFKAL80ETC concert",
+  "Si le sellIn est inférieur à 11",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si le sellIn est inférieur à 6",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+]
+`;
+
+exports[`Gilded Rose Doit augmenter la qualité pour Aged Brie 1`] = `
+[
+  "Pour chaque objet avec: Aged Brie 5 10",
+  "Si l'objet est un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+]
+`;
+
+exports[`Gilded Rose Doit augmenter la qualité pour les Passes Backstage 1`] = `
+[
+  "Pour chaque objet avec: Backstage passes to a TAFKAL80ETC concert 15 20",
+  "Si l'objet est un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet est un Backstage passes to a TAFKAL80ETC concert",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+]
+`;
+
+exports[`Gilded Rose Doit augmenter la qualité si elle est inférieure à 50 pour un objet normal 1`] = `
+[
+  "Pour chaque objet avec: Objet Normal -1 49",
+  "Si l'objet n'est pas un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est supérieure à 0",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente la qualité de 1",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+  "Si le sellIn est inférieur à 0",
+  "Si l'objet n'est pas un Aged Brie",
+  "Si l'objet n'est pas un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est supérieure à 0",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente la qualité de 1",
+]
+`;
+
+exports[`Gilded Rose Doit diminuer la qualité deux fois plus rapidement après la date de péremption pour les objets normaux 1`] = `
+[
+  "Pour chaque objet avec: Objet Normal -1 10",
+  "Si l'objet n'est pas un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est supérieure à 0",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente la qualité de 1",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+  "Si le sellIn est inférieur à 0",
+  "Si l'objet n'est pas un Aged Brie",
+  "Si l'objet n'est pas un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est supérieure à 0",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente la qualité de 1",
+]
+`;
+
+exports[`Gilded Rose Doit diminuer la qualité et le sellIn pour les objets normaux 1`] = `
+[
+  "Pour chaque objet avec: Objet Normal 5 10",
+  "Si l'objet n'est pas un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est supérieure à 0",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente la qualité de 1",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+]
+`;
+
+exports[`Gilded Rose Doit faire chuter la qualité à 0 pour les Passes Backstage après le concert 1`] = `
+[
+  "Pour chaque objet avec: Backstage passes to a TAFKAL80ETC concert 0 20",
+  "Si l'objet est un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet est un Backstage passes to a TAFKAL80ETC concert",
+  "Si le sellIn est inférieur à 11",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si le sellIn est inférieur à 6",
+  "Si la qualité est inférieure à 50",
+  "On incrémente la qualité de 1",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+  "Si le sellIn est inférieur à 0",
+  "Si l'objet n'est pas un Aged Brie",
+  "On décrémente la qualité de la qualité",
+]
+`;
+
+exports[`Gilded Rose Ne doit pas augmenter la qualité au-dessus de 50 pour Aged Brie 1`] = `
+[
+  "Pour chaque objet avec: Aged Brie 5 50",
+  "Si l'objet est un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+]
+`;
+
+exports[`Gilded Rose Ne doit pas changer la qualité ni le sellIn pour Sulfuras 1`] = `
+[
+  "Pour chaque objet avec: Sulfuras, Hand of Ragnaros 5 80",
+  "Si l'objet n'est pas un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si la qualité est supérieure à 0",
+]
+`;
+
+exports[`Gilded Rose Ne doit pas diminuer la qualité en dessous de zéro 1`] = `
+[
+  "Pour chaque objet avec: Objet Qualité Faible 5 0",
+  "Si l'objet n'est pas un Aged Brie ou un Backstage passes to a TAFKAL80ETC concert",
+  "Si l'objet n'est pas un Sulfuras, Hand of Ragnaros",
+  "On décrémente le sellIn de 1",
+]
+`;
