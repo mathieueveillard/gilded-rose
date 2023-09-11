@@ -35,6 +35,22 @@ export class GildedRose {
     }
   }
 
+  private handleExpired(item: Item) {
+    if (item.sellIn < 0) {
+      if (item.name === "Aged Brie") {
+        if (item.quality < MAX_QUALITY) {
+          item.quality += 1;
+        }
+      } else if (item.name === "Backstage passes to a TAFKAL80ETC concert") {
+        item.quality = 0;
+      } else if (item.name !== "Sulfuras, Hand of Ragnaros") {
+        if (item.quality > 0) {
+          item.quality -= 1;
+        }
+      }
+    }
+  }
+
   updateQuality() {
     for (const item of this.items) {
       if (item.name === "Aged Brie") {
@@ -48,6 +64,8 @@ export class GildedRose {
       if (item.name !== "Sulfuras, Hand of Ragnaros") {
         item.sellIn -= 1;
       }
+
+      this.handleExpired(item);
     }
     return this.items;
   }
