@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item should initialize correctly 1`] = `[]`;
+
+exports[`Item should set and get properties correctly 1`] = `[]`;

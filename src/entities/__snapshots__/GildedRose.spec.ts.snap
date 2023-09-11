@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GildedRose should decrease SellIn and Quality for a normal item by 1 1`] = `
+[
+  "Processing item: Normal Item with sellIn: 10 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is a regular item",
+  "Reducing quality by 1 for regular item",
+]
+`;
+
+exports[`GildedRose should degrade quality of Conjured items four times as fast after sell date 1`] = `
+[
+  "Processing item: Conjured with sellIn: 0 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Conjured",
+  "Reducing quality by 2 for Conjured item",
+  "SellIn is negative, reducing quality by 2 again for Conjured item",
+]
+`;
+
+exports[`GildedRose should degrade quality of Conjured items twice as fast 1`] = `
+[
+  "Processing item: Conjured with sellIn: 10 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Conjured",
+  "Reducing quality by 2 for Conjured item",
+]
+`;
+
+exports[`GildedRose should degrade quality twice as fast once the sell by date has passed 1`] = `
+[
+  "Processing item: Normal Item with sellIn: 0 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is a regular item",
+  "Reducing quality by 1 for regular item",
+  "SellIn is negative, reducing quality by 1 again for regular item",
+]
+`;
+
+exports[`GildedRose should drop quality of Backstage passes to 0 after concert 1`] = `
+[
+  "Processing item: Backstage passes to a TAFKAL80ETC concert with sellIn: 0 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Backstage passes",
+  "Increasing quality by 1 for Backstage passes",
+  "SellIn is less than 11, increasing quality by 1 again",
+  "SellIn is less than 6, increasing quality by 1 once more",
+  "Setting Backstage passes quality to 0 after concert",
+]
+`;
+
+exports[`GildedRose should increase quality of Aged Brie as it gets older 1`] = `
+[
+  "Processing item: Aged Brie with sellIn: 10 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Aged Brie",
+  "Increasing quality by 1 for Aged Brie",
+]
+`;
+
+exports[`GildedRose should increase quality of Aged Brie by 2 when sellIn is negative and quality is less than 50 1`] = `
+[
+  "Processing item: Aged Brie with sellIn: -1 and quality: 48",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Aged Brie",
+  "Increasing quality by 1 for Aged Brie",
+  "SellIn is negative, increasing quality by 1 again for Aged Brie",
+]
+`;
+
+exports[`GildedRose should increase quality of Backstage passes as SellIn approaches 1`] = `
+[
+  "Processing item: Backstage passes to a TAFKAL80ETC concert with sellIn: 15 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Backstage passes",
+  "Increasing quality by 1 for Backstage passes",
+]
+`;
+
+exports[`GildedRose should increase quality of Backstage passes by 2 when 10 days or less for SellIn 1`] = `
+[
+  "Processing item: Backstage passes to a TAFKAL80ETC concert with sellIn: 10 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Backstage passes",
+  "Increasing quality by 1 for Backstage passes",
+  "SellIn is less than 11, increasing quality by 1 again",
+]
+`;
+
+exports[`GildedRose should increase quality of Backstage passes by 3 when 5 days or less for SellIn 1`] = `
+[
+  "Processing item: Backstage passes to a TAFKAL80ETC concert with sellIn: 5 and quality: 20",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Backstage passes",
+  "Increasing quality by 1 for Backstage passes",
+  "SellIn is less than 11, increasing quality by 1 again",
+  "SellIn is less than 6, increasing quality by 1 once more",
+]
+`;
+
+exports[`GildedRose should initialize GildedRose with empty items array using default constructor 1`] = `[]`;
+
+exports[`GildedRose should not change quality or sellIn of Sulfuras 1`] = `
+[
+  "Processing item: Sulfuras, Hand of Ragnaros with sellIn: 10 and quality: 80",
+  "Item is Sulfuras, no change required",
+]
+`;
+
+exports[`GildedRose should not increase quality of any item above 50 1`] = `
+[
+  "Processing item: Aged Brie with sellIn: 10 and quality: 50",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Aged Brie",
+]
+`;
+
+exports[`GildedRose should not make quality negative 1`] = `
+[
+  "Processing item: Normal Item with sellIn: 10 and quality: 0",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is a regular item",
+]
+`;
+
+exports[`GildedRose should reset quality to 0 if a Conjured item goes below 0 1`] = `
+[
+  "Processing item: Conjured with sellIn: 10 and quality: 1",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Conjured",
+  "Reducing quality by 2 for Conjured item",
+  "Quality is negative, setting it to 0",
+]
+`;
+
+exports[`GildedRose should reset quality to 50 if it exceeds 50 for non-Sulfuras items 1`] = `
+[
+  "Processing item: Aged Brie with sellIn: -1 and quality: 51",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is Aged Brie",
+]
+`;
+
+exports[`GildedRose should set quality to 0 if an item's quality becomes negative 1`] = `
+[
+  "Processing item: Test Item with sellIn: 10 and quality: -5",
+  "Item is not Sulfuras, reducing sellIn by 1",
+  "Item is a regular item",
+]
+`;
