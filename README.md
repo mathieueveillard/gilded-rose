@@ -1,5 +1,11 @@
 # gilded-rose
 
+## Group members
+- Gaoussou Kader BAKAYKO 
+- Alexandre GRODENT
+- Hassan AIDIBE
+- Anne MICHAUD
+
 ## Specification
 
 Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
