@@ -1,19 +1,13 @@
-export class Item {
-  name: string;
-  sellIn: number;
-  quality: number;
+const MAX_QUALITY = 50;
 
-  constructor(name, sellIn, quality) {
-    this.name = name;
-    this.sellIn = sellIn;
-    this.quality = quality;
-  }
+export class Item {
+  constructor(public name: string, public sellIn: number, public quality: number) {}
 }
 
 export class GildedRose {
   items: Array<Item>;
 
-  constructor(items = [] as Array<Item>) {
+  constructor(items: Array<Item> = []) {
     this.items = items;
   }
 
