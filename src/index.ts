@@ -28,9 +28,11 @@ export class GildedRose {
     this.items.forEach((item: Item) => {
       switch (item.name) {
         case ItemsName.AgedBrie:
+          console.log('process AgedBrie');
           this.updateItemQuality(item, true, item.sellIn <= 0 ? 2 : 1);
           break;
         case ItemsName.BackstagePasses:
+          console.log('process BackstagePasses');
           if (item.sellIn <= 0) {
             item.quality = 0;
             break;
@@ -39,21 +41,26 @@ export class GildedRose {
           this.updateItemQuality(item, true, value);
           break;
         case ItemsName.Sulfuras:
+          console.log('process Sulfuras');
           item.quality = 80;
           break;
         case ItemsName.Conjured:
+          console.log('process Conjured');
           this.updateItemQuality(item, false, 2);
           break;
         default:
+          console.log('process default');
           this.updateItemQuality(item, false, item.sellIn <= 0 ? 2 : 1);
           break;
       }
+      console.log('update sellIn');
       item.name !== ItemsName.Sulfuras && item.sellIn--;
     });
     return this.items;
   }
 
   private updateItemQuality(item: Item, increaseQuality: boolean, value = 1) {
+    console.log(`${increaseQuality ? 'increase' : 'decrease'} item quality by ${value}`);
     if (increaseQuality) {
       item.quality = Math.min(50, item.quality + value);
     } else {
