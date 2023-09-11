@@ -1,7 +1,7 @@
 # gilded-rose
 
 ## Group members
-- Gaoussou Kader BAKAYKO 
+- Gaoussou Kader BAKAYOKO 
 - Alexandre GRODENT
 - Hassan AIDIBE
 - Anne MICHAUD
