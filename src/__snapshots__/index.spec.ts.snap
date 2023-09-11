@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gilded Rose Gilded Rose updateQuality with one Aged Brie 1`] = `
+[
+  "My item is : Aged Brie and his sellIn is : 0 and his quality is : 0",
+  "Aged Brie",
+  "My item is Aged Brie or Backstage passes to a TAFKAL80ETC concert",
+  "My item quality is less than 50 and gain 1 quality",
+  "My item quality is : 1",
+  "My item is not Sulfuras, Hand of Ragnaros and loose 1 sellIn",
+  "My item sellIn is : -1",
+  "My item sellIn is less than 0",
+  "My item is Aged Brie",
+  "My item quality is less than 50 and gain 1 quality",
+  "My item quality is : 2",
+  "My items",
+]
+`;
+
+exports[`Gilded Rose Gilded Rose updateQuality with one Backstage passes to a TAFKAL80ETC concert 1`] = `
+[
+  "My item is : Backstage passes to a TAFKAL80ETC concert and his sellIn is : 0 and his quality is : 0",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "My item is Aged Brie or Backstage passes to a TAFKAL80ETC concert",
+  "My item quality is less than 50 and gain 1 quality",
+  "My item quality is : 1",
+  "My item is Backstage passes to a TAFKAL80ETC concert",
+  "My item is Backstage passes to a TAFKAL80ETC concert and his sellIn is less than 110",
+  "My item quality is less than 50 and gain 1 quality",
+  "My item quality is : 2",
+  "My item is Backstage passes to a TAFKAL80ETC concert and his sellIn is less than 6 : 0",
+  "My item quality is less than 50 and gain 1 quality",
+  "My item quality is : 3",
+  "My item is not Sulfuras, Hand of Ragnaros and loose 1 sellIn",
+  "My item sellIn is : -1",
+  "My item sellIn is less than 0",
+  "My item is not Aged Brie",
+  "My item is Backstage passes to a TAFKAL80ETC concert and his quality is reduced to 0",
+  "My item quality is : 0",
+  "My items",
+]
+`;
+
+exports[`Gilded Rose Gilded Rose updateQuality with one Sulfuras, Hand of Ragnaros 1`] = `
+[
+  "My item is : Sulfuras, Hand of Ragnaros and his sellIn is : 0 and his quality is : 0",
+  "Sulfuras, Hand of Ragnaros",
+  "My item is not Aged Brie or Backstage passes to a TAFKAL80ETC concert",
+  "My items",
+]
+`;
+
+exports[`Gilded Rose Gilded Rose updateQuality with one item 1`] = `
+[
+  "My item is : Cheese and his sellIn is : 0 and his quality is : 0",
+  "Cheese",
+  "My item is not Aged Brie or Backstage passes to a TAFKAL80ETC concert",
+  "My item is not Sulfuras, Hand of Ragnaros and loose 1 sellIn",
+  "My item sellIn is : -1",
+  "My item sellIn is less than 0",
+  "My item is not Aged Brie",
+  "My item is not Backstage passes to a TAFKAL80ETC concert",
+  "My items",
+]
+`;
+
+exports[`Gilded Rose Gilded Rose updateQuality with one item and quality > 0 1`] = `
+[
+  "My item is : Cheese and his sellIn is : 0 and his quality is : 2",
+  "Cheese",
+  "My item is not Aged Brie or Backstage passes to a TAFKAL80ETC concert",
+  "My item quality is greater than 0",
+  "My item is not Sulfuras, Hand of Ragnaros and loose 1 quality",
+  "My item quality is : 1",
+  "My item is not Sulfuras, Hand of Ragnaros and loose 1 sellIn",
+  "My item sellIn is : -1",
+  "My item sellIn is less than 0",
+  "My item is not Aged Brie",
+  "My item is not Backstage passes to a TAFKAL80ETC concert",
+  "My item quality is greater than 0",
+  "My item is not Sulfuras, Hand of Ragnaros and loose 1 quality",
+  "My item quality is : 0",
+  "My items",
+]
+`;
+
+exports[`Gilded Rose Gilded Rose updateQuality without items 1`] = `
+[
+  "My items",
+]
+`;
