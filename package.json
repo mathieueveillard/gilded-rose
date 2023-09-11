@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mathieueveillard/gilded-rose.git"
+    "url": "git+https://github.com/gaoubak/gilded-rose_14.git"
   },
   "keywords": [
     "starter",
@@ -36,10 +36,10 @@
     "pbt",
     "ts-node"
   ],
-  "author": "Mathieu Eveillard",
+  "author": "Alexandre Grodent, Kader Bakayoko et Anne-Catherine Michaud",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mathieueveillard/gilded-rose/issues"
+    "url": "https://github.com/gaoubak/gilded-rose_14/issues"
   },
-  "homepage": "https://github.com/mathieueveillard/gilded-rose#readme"
+  "homepage": "https://github.com/gaoubak/gilded-rose_14#readme"
 }
