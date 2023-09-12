@@ -1,74 +1,47 @@
-import runGoldenMaster from "jest-golden-master"
-import { GildedRose } from "."
-import { Item } from "./Items/index"
+import { GildedRose } from "./index";
+import { Item } from "./Items/index";
 
-// si un article diminue deux fois plus rapidement une fois la date de vente passée.
-test("Once the sell by date has passed, Quality degrades twice as fast", async () => {
-  runGoldenMaster(async () => {
-    const items = [new Item("Standard Item", 0, 20)]
-    const gildedRose = new GildedRose(items)
-    gildedRose.updateItem()
-  })
-})
+test("should update the quality and sellIn of items correctly", () => {
+  const items = [
+    new Item("Aged Brie", 10, 30),
+    new Item("Backstage passes to a TAFKAL80ETC concert", 0, 25),
+    new Item("Backstage passes to a TAFKAL80ETC concert", 15, 25),
+    new Item("Backstage passes to a TAFKAL80ETC concert", 10, 25),
+    new Item("Backstage passes to a TAFKAL80ETC concert", 5, 25),
+    new Item("Random items", 0, 8),
+    new Item("Sulfuras, Hand of Ragnaros", 0, 50),
+    new Item("Random items", 10, 50),
+    new Item("Random items", 15, 0),
+  ]
 
-// si la qualité d'un article ne devient jamais négative.
-test("The Quality of an item is never negative", async () => {
-  runGoldenMaster(async () => {
-    const items = [new Item("Standard Item", 10, 0)]
-    const gildedRose = new GildedRose(items)
-    gildedRose.updateItem()
-  })
-})
+  const gildedRose = new GildedRose(items);
+  const updatedItems = gildedRose.updateItem();
+  
+  expect(updatedItems[0].sellIn).toBe(9)
+  expect(updatedItems[0].quality).toBe(31)
+  
+  expect(updatedItems[1].sellIn).toBe(-1)
+  expect(updatedItems[1].quality).toBe(0)
 
-//si la qualité de l'article "Aged Brie" augmente à mesure qu'il vieillit.
-test("Aged Brie actually increases in Quality the older it gets", async () => {
-  runGoldenMaster(async () => {
-    const items = [new Item("Aged Brie", 10, 20)]
-    const gildedRose = new GildedRose(items)
-    gildedRose.updateItem()
-  })
-})
+  expect(updatedItems[2].sellIn).toBe(14)
+  expect(updatedItems[2].quality).toBe(26)
+  
+  expect(updatedItems[3].sellIn).toBe(9)
+  expect(updatedItems[3].quality).toBe(27)
 
-// si la qualité d'un article ne dépasse jamais la valeur de 50.
-test("The Quality of an item is never more than 50", async () => {
-  runGoldenMaster(async () => {
-    const items = [new Item("Standard Item", 10, 50)]
-    const gildedRose = new GildedRose(items)
-    gildedRose.updateItem()
-  })
-})
+  expect(updatedItems[4].sellIn).toBe(4)
+  expect(updatedItems[4].quality).toBe(28)
 
-test("Sulfuras being a legendary item, never has to be sold or decreases in Quality", async () => {
-  runGoldenMaster(async () => {
-    const gildedRose = new GildedRose([new Item("Sulfuras, Hand of Ragnaros", 20, 50)])
-    gildedRose.updateItem()
-  })
-})
+  expect(updatedItems[5].sellIn).toBe(-1)
+  expect(updatedItems[5].quality).toBe(6)
 
-test("Backstage passes, increases in Quality by 1 as its SellIn value approaches more then 10 days", async () => {
-  runGoldenMaster(async () => {
-    const gildedRose = new GildedRose([new Item("Backstage passes to a TAFKAL80ETC concert", 15, 10)])
-    gildedRose.updateItem()
-  })
-})
+  expect(updatedItems[6].sellIn).toBe(0)
+  expect(updatedItems[6].quality).toBe(50)
 
-test("Backstage passes, increases in Quality by 2 as its SellIn value approaches 10 days or less", async () => {
-  runGoldenMaster(async () => {
-    const gildedRose = new GildedRose([new Item("Backstage passes to a TAFKAL80ETC concert", 9, 10)])
-    gildedRose.updateItem()
-  })
-})
+  expect(updatedItems[7].sellIn).toBe(9)
+  expect(updatedItems[7].quality).toBe(49)
 
-test("Backstage passes, increases in Quality by 3 as its SellIn value approaches 5 days or less", async () => {
-  runGoldenMaster(async () => {
-    const gildedRose = new GildedRose([new Item("Backstage passes to a TAFKAL80ETC concert", 4, 10)])
-    gildedRose.updateItem()
-  })
-})
+  expect(updatedItems[8].sellIn).toBe(14)
+  expect(updatedItems[8].quality).toBe(0)
+});
 
-test("Backstage passes, Quality become 0 as its SellIn value approaches 0 day", async () => {
-  runGoldenMaster(async () => {
-    const gildedRose = new GildedRose([new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10)])
-    gildedRose.updateItem()
-  })
-})

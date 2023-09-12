@@ -48,41 +48,6 @@ export class GildedRose {
     this.SellInItem(item)
   }
 
-  // private QualityAgedBrie(item: Item) {
-  //   if (item.quality < 50) {
-  //     item.quality += 1
-  //     console.log(`This item : ${item.name} got added 1 quality number and now has the following quality: ${item.quality}.`)
-  //   }
-  // }
-
-  // private QualityBackstagePasses(item: Item) {
-  //   if (item.sellIn > 10 && item.quality < 50) {
-  //     item.quality += 1
-  //     console.log(`This item : ${item.name} got added 1 quality number and now has the following quality: ${item.quality}.`)
-  //   } else if (item.sellIn > 5 && item.sellIn <= 10 && item.quality < 50) {
-  //     item.quality += 2
-  //     console.log(`This item : ${item.name} got added 2 quality number and now has the following quality: ${item.quality}.`)
-  //   } else if (item.sellIn > 0 && item.sellIn <= 5 && item.quality < 50) {
-  //     item.quality += 3
-  //     console.log(`This item : ${item.name} got added 3 quality number and now has the following quality: ${item.quality}.`)
-  //   } else if (item.sellIn <= 0){
-  //     item.quality = 0
-  //     console.log(`This item : ${item.name} got removed all quality number and now has the following quality: ${item.quality}.`)
-  //   }
-  // }
-
-  // private QualityRegularItem(item: Item) {
-  //   if (item.sellIn > 0 && item.quality > 0) {
-  //     item.quality -= 1
-  //     console.log(`This item : ${item.name} got removed 1 quality number and now has the following quality: ${item.quality}.`)
-  //   } else if (item.sellIn <= 0 && item.quality > 0) {
-  //     item.quality -= 2
-  //     console.log(
-  //       `This item : ${item.name} got removed 2 quality number after sellIn days ended and now has the following quality: ${item.quality}.`
-  //     )
-  //   }
-  // }
-
   private SellInItem(item: Item) {
     if (item.name !== "Sulfuras, Hand of Ragnaros") {
       item.sellIn -= 1
