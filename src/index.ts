@@ -18,53 +18,101 @@ export class Item {
 }
 
 export class GildedRose {
+  private MAX_QUALITY = 50;
+  private LEGENDARY_QUALITY = 80;
+  private DEFAULT_QUALITY_UPDATE = 1;
+  private MIN_SELLIN = 0;
+
   items: Array<Item>;
 
   constructor(items = [] as Array<Item>) {
     this.items = items;
   }
 
-  updateQuality() {
+  updateQuality(): Array<Item> {
     this.items.forEach((item: Item) => {
+      console.log(item.name, item.sellIn, item.quality);
       switch (item.name) {
         case ItemsName.AgedBrie:
-          console.log('process AgedBrie');
-          this.updateItemQuality(item, true, item.sellIn <= 0 ? 2 : 1);
+          this.updateAgedBrie(item);
           break;
         case ItemsName.BackstagePasses:
-          console.log('process BackstagePasses');
-          if (item.sellIn <= 0) {
-            item.quality = 0;
-            break;
-          }
-          const value = item.sellIn <= 5 ? 3 : item.sellIn <= 10 ? 2 : 1;
-          this.updateItemQuality(item, true, value);
+          this.updateBackstagePasses(item);
           break;
         case ItemsName.Sulfuras:
-          console.log('process Sulfuras');
-          item.quality = 80;
+          this.updateSulfuras(item);
           break;
         case ItemsName.Conjured:
-          console.log('process Conjured');
-          this.updateItemQuality(item, false, 2);
+          this.updateConjured(item);
           break;
         default:
-          console.log('process default');
-          this.updateItemQuality(item, false, item.sellIn <= 0 ? 2 : 1);
+          this.updateDefault(item);
           break;
       }
-      console.log('update sellIn');
-      item.name !== ItemsName.Sulfuras && item.sellIn--;
+      this.updateSellIn(item);
     });
     return this.items;
   }
 
-  private updateItemQuality(item: Item, increaseQuality: boolean, value = 1) {
-    console.log(`${increaseQuality ? 'increase' : 'decrease'} item quality by ${value}`);
-    if (increaseQuality) {
-      item.quality = Math.min(50, item.quality + value);
+  private updateAgedBrie(item: Item): void {
+    if (item.quality < this.MAX_QUALITY && item.sellIn > 0) {
+      console.log(item.name, 'sell in', item.sellIn, 'quality=0');
+      item.quality += this.DEFAULT_QUALITY_UPDATE;
+    } else if (item.quality < this.MAX_QUALITY && item.sellIn <= 0) {
+      console.log(item.name, 'sell in', item.sellIn, 'quality=0');
+      item.quality += this.DEFAULT_QUALITY_UPDATE * 2;
+    }
+  }
+
+  private updateBackstagePasses(item: Item): void {
+    if (item.sellIn <= this.MIN_SELLIN) {
+      console.log(item.name, 'sell in', item.sellIn, 'quality=0');
+      item.quality = 0;
     } else {
-      item.quality = Math.max(0, item.quality - value);
+      console.log(item.name, 'sell in', item.sellIn, 'quality++');
+      item.quality += this.DEFAULT_QUALITY_UPDATE;
+      if (item.sellIn <= 10) {
+        console.log(item.name, 'sell in', item.sellIn, 'quality++');
+        item.quality += this.DEFAULT_QUALITY_UPDATE;
+      }
+      if (item.sellIn <= 5) {
+        console.log(item.name, 'sell in', item.sellIn, 'quality++');
+        item.quality += this.DEFAULT_QUALITY_UPDATE;
+      }
+      item.quality > this.MAX_QUALITY ? item.quality = this.MAX_QUALITY : item.quality;
+    }
+  }
+
+  private updateSulfuras(item: Item): void {
+    console.log(item.name, 'sell in', item.sellIn, 'quality=80');
+    item.quality = this.LEGENDARY_QUALITY;
+  }
+
+  private updateConjured(item: Item): void {
+    if (item.sellIn > 0) {
+      console.log(item.name, 'sell in', item.sellIn, 'quality-=2');
+      item.quality -= this.DEFAULT_QUALITY_UPDATE * 2;
+    } else {
+      console.log(item.name, 'sell in', item.sellIn, 'quality-=4');
+      item.quality -= this.DEFAULT_QUALITY_UPDATE * 4;
+    }
+  }
+
+  private updateDefault(item: Item): void {
+    if (item.quality > 0 && item.sellIn > 0) {
+      console.log(item.name, 'sell in', item.sellIn, 'quality-=1');
+      item.quality -= this.DEFAULT_QUALITY_UPDATE;
+    } else if (item.quality > 0 && item.sellIn <= 0) {
+      console.log(item.name, 'sell in', item.sellIn, 'quality-=2');
+      item.quality -= this.DEFAULT_QUALITY_UPDATE * 2;
+    }
+  }
+
+  private updateSellIn(item: Item): void {
+    if (item.name !== ItemsName.Sulfuras) {
+      console.log(item.name, 'update sell in');
+      item.sellIn--;
     }
   }
 }
+

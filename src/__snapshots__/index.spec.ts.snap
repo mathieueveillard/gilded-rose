@@ -6,86 +6,88 @@ exports[`GildedRose constructor should instantiate with provided items 1`] = `[]
 
 exports[`GildedRose should decrease quality and sellIn for a normal item 1`] = `
 [
-  "process default",
-  "decrease item quality by 1",
-  "update sellIn",
+  "normal",
+  "normal",
+  "normal",
 ]
 `;
 
 exports[`GildedRose should degrade twice as fast for normal items once sell date has passed 1`] = `
 [
-  "process default",
-  "decrease item quality by 2",
-  "update sellIn",
+  "normal",
+  "normal",
+  "normal",
 ]
 `;
 
 exports[`GildedRose should drop quality to 0 for Backstage passes after concert 1`] = `
 [
-  "process BackstagePasses",
-  "update sellIn",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
 ]
 `;
 
 exports[`GildedRose should handle Sulfuras correctly (no change) 1`] = `
 [
-  "process Sulfuras",
-  "update sellIn",
+  "Sulfuras, Hand of Ragnaros",
+  "Sulfuras, Hand of Ragnaros",
 ]
 `;
 
 exports[`GildedRose should increase quality by 2 for Backstage passes with 10 days or less 1`] = `
 [
-  "process BackstagePasses",
-  "increase item quality by 2",
-  "update sellIn",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
 ]
 `;
 
 exports[`GildedRose should increase quality by 3 for Backstage passes with 5 days or less 1`] = `
 [
-  "process BackstagePasses",
-  "increase item quality by 3",
-  "update sellIn",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
 ]
 `;
 
 exports[`GildedRose should increase quality for Aged Brie 1`] = `
 [
-  "process AgedBrie",
-  "increase item quality by 1",
-  "update sellIn",
+  "Aged Brie",
+  "Aged Brie",
+  "Aged Brie",
 ]
 `;
 
 exports[`GildedRose should increase quality for Backstage passes as concert approaches 1`] = `
 [
-  "process BackstagePasses",
-  "increase item quality by 1",
-  "update sellIn",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "Backstage passes to a TAFKAL80ETC concert",
 ]
 `;
 
 exports[`GildedRose should increase quality of Aged Brie by 1 when sellIn is negative 1`] = `
 [
-  "process AgedBrie",
-  "increase item quality by 2",
-  "update sellIn",
+  "Aged Brie",
+  "Aged Brie",
+  "Aged Brie",
 ]
 `;
 
 exports[`GildedRose should not decrease quality below 0 1`] = `
 [
-  "process default",
-  "decrease item quality by 1",
-  "update sellIn",
+  "normal",
+  "normal",
 ]
 `;
 
 exports[`GildedRose should not increase quality above 50 for Aged Brie 1`] = `
 [
-  "process AgedBrie",
-  "increase item quality by 1",
-  "update sellIn",
+  "Aged Brie",
+  "Aged Brie",
 ]
 `;
