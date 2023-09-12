@@ -33,7 +33,7 @@ export class GildedRose {
             if (this.items[i].sellIn < 11) {
               if (this.items[i].quality < 50) {
                 this.items[i].quality = this.items[i].quality + 2;
-                console.log(`This item : ${this.items[i]} got added 1 quality number and now has the following quality: ${this.items[i].quality}.`)
+                console.log(`This item : ${this.items[i]} got added 2 quality number and now has the following quality: ${this.items[i].quality}.`)
               }
             }
             if (this.items[i].sellIn < 6) {
