@@ -1,5 +1,42 @@
 import runGoldenMaster from "jest-golden-master"
 import { Item, GildedRose } from "."
+
+// si un article diminue deux fois plus rapidement une fois la date de vente passée.
+test("Once the sell by date has passed, Quality degrades twice as fast", async () => {
+  runGoldenMaster(async () => {
+    const items = [new Item("Standard Item", 0, 20)];
+    const gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+  })
+});
+
+// si la qualité d'un article ne devient jamais négative.
+test("The Quality of an item is never negative", async () => {
+  runGoldenMaster(async () => {
+    const items = [new Item("Standard Item", 10, 0)];
+    const gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+  })
+});
+
+//si la qualité de l'article "Aged Brie" augmente à mesure qu'il vieillit.
+test("Aged Brie actually increases in Quality the older it gets", async () => {
+  runGoldenMaster(async () => {
+    const items = [new Item("Aged Brie", 10, 20)];
+    const gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+  })
+});
+
+// si la qualité d'un article ne dépasse jamais la valeur de 50.
+test("The Quality of an item is never more than 50", async () => {
+  runGoldenMaster(async () => {
+    const items = [new Item("Standard Item", 10, 50)];
+    const gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+  })
+});
+
 // OK
 test("Sulfuras being a legendary item, never has to be sold or decreases in Quality", async () => {
   runGoldenMaster(async () => {
