@@ -59,11 +59,21 @@ export class GildedRose {
 
   private updateStandardItem(item: Item) {
     console.log(`Before updateStandardItem: name=${item.name}, sellIn=${item.sellIn}, quality=${item.quality}`);
-
+    
     item.sellIn -= 1;
-    const decreaseAmount = item.sellIn < 0 ? Quality.DECREASE * 2 : Quality.DECREASE;
-    item.quality = Math.max(Quality.MIN, item.quality - decreaseAmount);
+    
+    // Diminue la qualité deux fois plus rapidement si la date de vente est passée
+    if (item.sellIn < 0) {
+        item.quality = Math.max(Quality.MIN, item.quality - Quality.DECREASE * 2);
+    } else {
+        item.quality = Math.max(Quality.MIN, item.quality - Quality.DECREASE);
+    }
+    
+    // Assurez-vous que la qualité ne dépasse pas 50
+    if (item.quality > Quality.MAX) {
+        item.quality = Quality.MAX;
+    }
 
     console.log(`After updateStandardItem: name=${item.name}, sellIn=${item.sellIn}, quality=${item.quality}`);
-  }
+}
 }

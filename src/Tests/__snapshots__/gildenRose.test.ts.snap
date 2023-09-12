@@ -24,7 +24,7 @@ exports[`The Quality of an item is never more than 50 1`] = `
 [
   Item {
     "name": "Standard Item",
-    "quality": 59,
+    "quality": 50,
     "sellIn": 9,
   },
 ]
