@@ -12,7 +12,9 @@ test("should update the quality and sellIn of items correctly", () => {
     new Item("Random items", 0, 8),
     new Item("Sulfuras, Hand of Ragnaros", 0, 80),
     new Item("Random items", 10, 50),
-    new Item("Random items", 15, 0)
+    new Item("Random items", 15, 0),
+    new Item("Conjured Item", 12, 16),
+    new Item("Conjured Item", 0, 16),
   ]
 
   const gildedRose = new GildedRose(items)
@@ -44,4 +46,10 @@ test("should update the quality and sellIn of items correctly", () => {
 
   expect(updatedItems[8].sellIn).toBe(14)
   expect(updatedItems[8].quality).toBe(0)
+
+  expect(updatedItems[9].sellIn).toBe(11)
+  expect(updatedItems[9].quality).toBe(14)
+
+  expect(updatedItems[10].sellIn).toBe(-1)
+  expect(updatedItems[10].quality).toBe(14)
 })

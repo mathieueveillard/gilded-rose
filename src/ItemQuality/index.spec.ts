@@ -31,11 +31,16 @@ test("Should update quality for Backstage Passes", () => {
 })
 
 test("Should decrease quality for Regular Item", () => {
-  const item = new Item("Regular Item", 5, 20)
-  const quality = new Quality(item)
+  const item1 = new Item("Regular Item", 5, 20)
+  const item2 = new Item("Regular Item", 0, 20)
+  const quality1 = new Quality(item1)
+  const quality2 = new Quality(item2)
 
-  quality.RegularItem()
-  expect(item.quality).toBe(19)
+  quality1.RegularItem()
+  quality2.RegularItem()
+
+  expect(item1.quality).toBe(19)
+  expect(item1.quality).toBe(18)
 })
 
 test("Should decrease quality for Conjured Item", () => {
