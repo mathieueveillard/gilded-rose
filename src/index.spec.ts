@@ -51,5 +51,5 @@ test("should update the quality and sellIn of items correctly", () => {
   expect(updatedItems[9].quality).toBe(14)
 
   expect(updatedItems[10].sellIn).toBe(-1)
-  expect(updatedItems[10].quality).toBe(14)
+  expect(updatedItems[10].quality).toBe(12)
 })

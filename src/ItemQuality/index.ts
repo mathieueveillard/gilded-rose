@@ -42,6 +42,20 @@ class ItemQuality {
     }
   }
 
+  public ConjuredItem() {
+    if (this.item.sellIn > 0 && this.item.quality > 0) {
+      this.item.quality -= 2
+      console.log(
+        `This item : ${this.item.name} got removed 1 quality number and now has the following quality: ${this.item.quality}.`
+      )
+    } else if (this.item.sellIn <= 0 && this.item.quality > 0) {
+      this.item.quality -= 4
+      console.log(
+        `This item : ${this.item.name} got removed 2 quality number after sellIn days ended and now has the following quality: ${this.item.quality}.`
+      )
+    }
+  }
+
 }
 
 export default ItemQuality

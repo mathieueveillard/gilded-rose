@@ -30,7 +30,7 @@ export class GildedRose {
         item.quality = 80
         break
       case "Conjured Item":
-        item.quality = 80
+        itemQuality.ConjuredItem()
         break
       default:
         itemQuality.RegularItem()

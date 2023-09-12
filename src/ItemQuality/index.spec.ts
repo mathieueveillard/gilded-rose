@@ -40,7 +40,7 @@ test("Should decrease quality for Regular Item", () => {
   quality2.RegularItem()
 
   expect(item1.quality).toBe(19)
-  expect(item1.quality).toBe(18)
+  expect(item2.quality).toBe(18)
 })
 
 test("Should decrease quality for Conjured Item", () => {
