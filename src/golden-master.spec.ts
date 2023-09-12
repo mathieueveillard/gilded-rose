@@ -1,6 +1,7 @@
 import runGoldenMaster from "jest-golden-master"
 import { GildedRose } from "."
-import { Item } from "./Items/index"
+import { Item } from "./Entity/item"
+
 
 // si un article diminue deux fois plus rapidement une fois la date de vente passée.
 test("Once the sell by date has passed, Quality degrades twice as fast", async () => {
@@ -40,7 +41,7 @@ test("The Quality of an item is never more than 50", async () => {
 
 test("Sulfuras being a legendary item, never has to be sold or decreases in Quality", async () => {
   runGoldenMaster(async () => {
-    const gildedRose = new GildedRose([new Item("Sulfuras, Hand of Ragnaros", 20, 50)])
+    const gildedRose = new GildedRose([new Item("Sulfuras, Hand of Ragnaros", 20, 80)])
     gildedRose.updateItem()
   })
 })

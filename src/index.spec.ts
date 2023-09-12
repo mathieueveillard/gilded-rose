@@ -1,5 +1,6 @@
-import { GildedRose } from "./index";
-import { Item } from "./Items/index";
+import { GildedRose } from "./index"
+import { Item } from "./Entity/item"
+
 
 test("should update the quality and sellIn of items correctly", () => {
   const items = [
@@ -9,23 +10,23 @@ test("should update the quality and sellIn of items correctly", () => {
     new Item("Backstage passes to a TAFKAL80ETC concert", 10, 25),
     new Item("Backstage passes to a TAFKAL80ETC concert", 5, 25),
     new Item("Random items", 0, 8),
-    new Item("Sulfuras, Hand of Ragnaros", 0, 50),
+    new Item("Sulfuras, Hand of Ragnaros", 0, 80),
     new Item("Random items", 10, 50),
-    new Item("Random items", 15, 0),
+    new Item("Random items", 15, 0)
   ]
 
-  const gildedRose = new GildedRose(items);
-  const updatedItems = gildedRose.updateItem();
-  
+  const gildedRose = new GildedRose(items)
+  const updatedItems = gildedRose.updateItem()
+
   expect(updatedItems[0].sellIn).toBe(9)
   expect(updatedItems[0].quality).toBe(31)
-  
+
   expect(updatedItems[1].sellIn).toBe(-1)
   expect(updatedItems[1].quality).toBe(0)
 
   expect(updatedItems[2].sellIn).toBe(14)
   expect(updatedItems[2].quality).toBe(26)
-  
+
   expect(updatedItems[3].sellIn).toBe(9)
   expect(updatedItems[3].quality).toBe(27)
 
@@ -36,12 +37,11 @@ test("should update the quality and sellIn of items correctly", () => {
   expect(updatedItems[5].quality).toBe(6)
 
   expect(updatedItems[6].sellIn).toBe(0)
-  expect(updatedItems[6].quality).toBe(50)
+  expect(updatedItems[6].quality).toBe(80)
 
   expect(updatedItems[7].sellIn).toBe(9)
   expect(updatedItems[7].quality).toBe(49)
 
   expect(updatedItems[8].sellIn).toBe(14)
   expect(updatedItems[8].quality).toBe(0)
-});
-
+})
