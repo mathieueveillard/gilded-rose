@@ -12,18 +12,16 @@ exports[`Aged Brie actually increases in Quality the older it gets 1`] = `
 exports[`Backstage passes, increases in Quality as its SellIn value approaches 0 day 1`] = `
 [
   "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 0.",
-  "This item : Backstage passes to a TAFKAL80ETC concert got added 2 quality number and now has the following quality: 12.",
-  "This item : Backstage passes to a TAFKAL80ETC concert got added 1 quality number and now has the following quality: 13.",
+  "This item : Backstage passes to a TAFKAL80ETC concert got removed all quality number and now has the following quality: 0.",
   "This item : Backstage passes to a TAFKAL80ETC concert got removed 1 sellIn day and now has the following sellIn: -1.",
-  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 13 and this sellin : -1.",
+  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 0 and this sellin : -1.",
 ]
 `;
 
 exports[`Backstage passes, increases in Quality as its SellIn value approaches 5 days or less 1`] = `
 [
   "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 4.",
-  "This item : Backstage passes to a TAFKAL80ETC concert got added 2 quality number and now has the following quality: 12.",
-  "This item : Backstage passes to a TAFKAL80ETC concert got added 1 quality number and now has the following quality: 13.",
+  "This item : Backstage passes to a TAFKAL80ETC concert got added 3 quality number and now has the following quality: 13.",
   "This item : Backstage passes to a TAFKAL80ETC concert got removed 1 sellIn day and now has the following sellIn: 3.",
   "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 13 and this sellin : 3.",
 ]
@@ -41,9 +39,9 @@ exports[`Backstage passes, increases in Quality as its SellIn value approaches 1
 exports[`Once the sell by date has passed, Quality degrades twice as fast 1`] = `
 [
   "Before update, Standard Item has this quality : 20 and this sellin : 0.",
-  "This item : Standard Item got removed 1 quality number and now has the following quality: 19.",
+  "This item : Standard Item got removed 2 quality number after sellIn days ended and now has the following quality: 18.",
   "This item : Standard Item got removed 1 sellIn day and now has the following sellIn: -1.",
-  "After update, Standard Item has this quality : 19 and this sellin : -1.",
+  "After update, Standard Item has this quality : 18 and this sellin : -1.",
 ]
 `;
 
