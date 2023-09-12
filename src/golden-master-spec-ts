@@ -1,0 +1,7 @@
+import runGoldenMaster from 'jest-golden-master'
+
+test("Ceci est un test", async () => {
+    runGoldenMaster(async () => {
+        //TON TEST ICI
+    })
+})
