@@ -115,11 +115,13 @@ export class GildedRose {
   }
 
   private QualityBackstagePasses(item: Item) {
-    if (item.sellIn > 5 && item.sellIn < 11 && item.quality < 50) {
+    if (item.sellIn > 10 && item.quality < 50) {
+      item.quality += 1
+      console.log(`This item : ${item.name} got added 1 quality number and now has the following quality: ${item.quality}.`)
+    } else if (item.sellIn > 5 && item.sellIn <= 10 && item.quality < 50) {
       item.quality += 2
       console.log(`This item : ${item.name} got added 2 quality number and now has the following quality: ${item.quality}.`)
-    }
-    else if (item.sellIn > 0 && item.sellIn < 6 && item.quality < 50) {
+    } else if (item.sellIn > 0 && item.sellIn <= 5 && item.quality < 50) {
       item.quality += 3
       console.log(`This item : ${item.name} got added 3 quality number and now has the following quality: ${item.quality}.`)
     } else if (item.sellIn <= 0){

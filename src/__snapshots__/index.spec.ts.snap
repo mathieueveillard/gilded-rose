@@ -9,7 +9,7 @@ exports[`Aged Brie actually increases in Quality the older it gets 1`] = `
 ]
 `;
 
-exports[`Backstage passes, increases in Quality as its SellIn value approaches 0 day 1`] = `
+exports[`Backstage passes, Quality become 0 as its SellIn value approaches 0 day 1`] = `
 [
   "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 0.",
   "This item : Backstage passes to a TAFKAL80ETC concert got removed all quality number and now has the following quality: 0.",
@@ -18,21 +18,30 @@ exports[`Backstage passes, increases in Quality as its SellIn value approaches 0
 ]
 `;
 
-exports[`Backstage passes, increases in Quality as its SellIn value approaches 5 days or less 1`] = `
+exports[`Backstage passes, increases in Quality by 1 as its SellIn value approaches more then 10 days 1`] = `
 [
-  "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 4.",
-  "This item : Backstage passes to a TAFKAL80ETC concert got added 3 quality number and now has the following quality: 13.",
-  "This item : Backstage passes to a TAFKAL80ETC concert got removed 1 sellIn day and now has the following sellIn: 3.",
-  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 13 and this sellin : 3.",
+  "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 15.",
+  "This item : Backstage passes to a TAFKAL80ETC concert got added 1 quality number and now has the following quality: 11.",
+  "This item : Backstage passes to a TAFKAL80ETC concert got removed 1 sellIn day and now has the following sellIn: 14.",
+  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 11 and this sellin : 14.",
 ]
 `;
 
-exports[`Backstage passes, increases in Quality as its SellIn value approaches 10 days or less 1`] = `
+exports[`Backstage passes, increases in Quality by 2 as its SellIn value approaches 10 days or less 1`] = `
 [
   "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 9.",
   "This item : Backstage passes to a TAFKAL80ETC concert got added 2 quality number and now has the following quality: 12.",
   "This item : Backstage passes to a TAFKAL80ETC concert got removed 1 sellIn day and now has the following sellIn: 8.",
   "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 12 and this sellin : 8.",
+]
+`;
+
+exports[`Backstage passes, increases in Quality by 3 as its SellIn value approaches 5 days or less 1`] = `
+[
+  "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 4.",
+  "This item : Backstage passes to a TAFKAL80ETC concert got added 3 quality number and now has the following quality: 13.",
+  "This item : Backstage passes to a TAFKAL80ETC concert got removed 1 sellIn day and now has the following sellIn: 3.",
+  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 13 and this sellin : 3.",
 ]
 `;
 
