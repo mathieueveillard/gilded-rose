@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ceci est un test 1`] = `[]`;
+exports[`Ceci est un test 1`] = `
+[
+  "31 Quality is less than 50', 'Quality win 1",
+  "Aged Brie is Not Sulfuras item so sell In decrease of 1 ",
+]
+`;

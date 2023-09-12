@@ -3,8 +3,9 @@ import { Item, GildedRose } from '.'
 
 test("Ceci est un test", async () => {
     runGoldenMaster(async () => {
-        const item1 = new Item("Aged Brie", 10, 50);
+        const item1 = new Item("Aged Brie", 10, 30);
         const itemsArray = [item1];
-        const gr = new GildedRose()
+        const gr = new GildedRose(itemsArray)
+        gr.updateQuality()
     })
 })

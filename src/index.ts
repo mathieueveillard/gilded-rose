@@ -20,32 +20,32 @@ export class GildedRose {
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i].name != "Aged Brie" && this.items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
-        console.log(this.items[i].name, 'Is not Aged Brie and not TAFKAL80ETC concert')
+        console.log(`${this.items[i].name} is not Aged Brie and not TAFKAL80ETC concert`)
         if (this.items[i].quality > 0) {
-          console.log(this.items[i].quality, 'Quality is more than 0')
+          console.log(`${this.items[i].quality} Quality is more than 0`)
           if (this.items[i].name != "Sulfuras, Hand of Ragnaros") {
             this.items[i].quality = this.items[i].quality - 1;
-            console.log(this.items[i].name, 'Is not Sulfuras Weapon', this.items[i].quality, 'quality has decrease of 1')
+            console.log(`${this.items[i].name} Is not Sulfuras Weapon  ${this.items[i].quality} quality has decrease of 1`)
           }
         }
       } else {
         if (this.items[i].quality < 50) {
           this.items[i].quality = this.items[i].quality + 1;
-          console.log(this.items[i].quality, 'Quality is less than 50', 'Quality win 1')
+          console.log(`${this.items[i].quality} Quality is less than 50', 'Quality win 1`)
           if (this.items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
-            console.log(this.items[i].name, 'Is TAFKAL80ETC concert part')
+            console.log(`${this.items[i].name} Is TAFKAL80ETC concert part`)
             if (this.items[i].sellIn < 11) {
               console.log("sell In under 11")
               if (this.items[i].quality < 50) {
                 this.items[i].quality = this.items[i].quality + 1;
-                console.log(this.items[i].quality, 'Quality is less than 50', 'Quality win 1 from 11 sell In')
+                console.log(`${this.items[i].quality} Quality is less than 50 Quality win 1 from 11 sell In`)
               }
             }
             if (this.items[i].sellIn < 6) {
               console.log("sell In under 6")
               if (this.items[i].quality < 50) {
                 this.items[i].quality = this.items[i].quality + 1;
-                console.log(this.items[i].quality, 'Quality is less than 50', 'Quality win 1 from 6 sell in')
+                console.log(`${this.items[i].quality} Quality is less than 50 Quality win 1 from 6 sell in`)
               }
             }
           }
@@ -53,7 +53,7 @@ export class GildedRose {
       }
       if (this.items[i].name != "Sulfuras, Hand of Ragnaros") {
         this.items[i].sellIn = this.items[i].sellIn - 1;
-        console.log(this.items[i].name, "is Not Sulfuras item so sell In decrease of 1")
+        console.log(`${this.items[i].name} is Not Sulfuras item so sell In decrease of 1 `)
       }
       if (this.items[i].sellIn < 0) {
         console.log("sell In inferior than 0")
