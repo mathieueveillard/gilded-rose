@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Backstage passes, increases in Quality as its SellIn value approaches 0 day 1`] = `
+[
+  "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 0.",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 0 and this sellin : -1.",
+]
+`;
+
+exports[`Backstage passes, increases in Quality as its SellIn value approaches 5 days or less 1`] = `
+[
+  "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 4.",
+  "Backstage passes to a TAFKAL80ETC concert",
+  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 13 and this sellin : 3.",
+]
+`;
+
+exports[`Backstage passes, increases in Quality as its SellIn value approaches 10 days or less 1`] = `
+[
+  "Before update, Backstage passes to a TAFKAL80ETC concert has this quality : 10 and this sellin : 9.",
+  "After update, Backstage passes to a TAFKAL80ETC concert has this quality : 12 and this sellin : 8.",
+]
+`;
+
+exports[`Sulfuras being a legendary item, never has to be sold or decreases in Quality 1`] = `
+[
+  "Before update, Sulfuras, Hand of Ragnaros has this quality : 50 and this sellin : 20.",
+  "After update, Sulfuras, Hand of Ragnaros has this quality : 50 and this sellin : 20.",
+]
+`;
