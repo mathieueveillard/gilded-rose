@@ -1,5 +1,6 @@
 import runGoldenMaster from "jest-golden-master"
-import { Item, GildedRose } from "."
+import { GildedRose } from "."
+import { Item } from './Items/item'
 
 // si un article diminue deux fois plus rapidement une fois la date de vente passée.
 test("Once the sell by date has passed, Quality degrades twice as fast", async () => {
