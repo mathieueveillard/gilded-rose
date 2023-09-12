@@ -6,3 +6,59 @@ exports[`Ceci est un test 1`] = `
   "Aged Brie is Not Sulfuras item so sell In decrease of 1 ",
 ]
 `;
+
+exports[`sellIn inférieur à 0 1`] = `
+[
+  "Aged Brie is Not Sulfuras item so sell In decrease of 1 ",
+  "sell In inferior than 0",
+]
+`;
+
+exports[`sellIn inférieur à 0 et nom != Brie/TAFKAL80ETC/Sulfuras 1`] = `
+[
+  "Different is not Aged Brie and not TAFKAL80ETC concert",
+  "Different is Not Sulfuras item so sell In decrease of 1 ",
+  "sell In inferior than 0",
+  "Is not Brie",
+  "Is not also TAFKAL80ETC concert",
+]
+`;
+
+exports[`sellIn inférieur à 0, nom != TAFKAL80ETC et quality <50 1`] = `
+[
+  "41 Quality is less than 50', 'Quality win 1",
+  "Backstage passes to a TAFKAL80ETC concert Is TAFKAL80ETC concert part",
+  "sell In under 11",
+  "42 Quality is less than 50 Quality win 1 from 11 sell In",
+  "sell In under 6",
+  "43 Quality is less than 50 Quality win 1 from 6 sell in",
+  "Backstage passes to a TAFKAL80ETC concert is Not Sulfuras item so sell In decrease of 1 ",
+  "sell In inferior than 0",
+  "Is not Brie",
+  "else quality - quality",
+]
+`;
+
+exports[`sellIn inférieur à 0, nom = TAFKAL80ETC 1`] = `
+[
+  "Backstage passes to a TAFKAL80ETC concert is Not Sulfuras item so sell In decrease of 1 ",
+  "sell In inferior than 0",
+  "Is not Brie",
+  "else quality - quality",
+]
+`;
+
+exports[`sellIn inférieur à 0, nom =! sulfuras et quality > 0 1`] = `
+[
+  "Different is not Aged Brie and not TAFKAL80ETC concert",
+  "60 Quality is more than 0",
+  "Different Is not Sulfuras Weapon  59 quality has decrease of 1",
+  "Different is Not Sulfuras item so sell In decrease of 1 ",
+  "sell In inferior than 0",
+  "Is not Brie",
+  "Is not also TAFKAL80ETC concert",
+  "quality is more than 0",
+  "Is also not Sulfuras weapon",
+  "the quality decrease of 1 because is something else",
+]
+`;
