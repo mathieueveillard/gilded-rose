@@ -24,7 +24,7 @@ export class GildedRose {
         if (this.items[i].quality > 0) {
           if (this.items[i].name != "Sulfuras, Hand of Ragnaros") {
             this.items[i].quality = this.items[i].quality - 1;
-            // console.log(`This item : ${this.items[i].name} got removed 1 quality number and now has the following quality: ${this.items[i].quality}.`)
+            console.log(`This item : ${this.items[i].name} got removed 1 quality number and now has the following quality: ${this.items[i].quality}.`)
           }
         }
       } else {
@@ -33,14 +33,14 @@ export class GildedRose {
             if (this.items[i].sellIn < 11) {
               if (this.items[i].quality < 50) {
                 this.items[i].quality = this.items[i].quality + 2;
-                // console.log(`This item : ${this.items[i]} got added 1 quality number and now has the following quality: ${this.items[i].quality}.`)
+                console.log(`This item : ${this.items[i]} got added 1 quality number and now has the following quality: ${this.items[i].quality}.`)
               }
             }
             if (this.items[i].sellIn < 6) {
               console.log(`${this.items[i].name}`)
               if (this.items[i].quality < 50) {
                 this.items[i].quality = this.items[i].quality + 1;
-                // console.log(`This item : ${this.items[i].name} got added 1 quality number and now has the following quality: ${this.items[i].quality}.`)
+                console.log(`This item : ${this.items[i].name} got added 1 quality number and now has the following quality: ${this.items[i].quality}.`)
               }
             }
           }
@@ -48,7 +48,7 @@ export class GildedRose {
       }
       if (this.items[i].name != "Sulfuras, Hand of Ragnaros") {
         this.items[i].sellIn = this.items[i].sellIn - 1;
-        // console.log(`This item : ${this.items[i].name} got removed 1 sellin number and now has the following sellin: ${this.items[i].sellIn}.`)
+        console.log(`This item : ${this.items[i].name} got removed 1 sellin number and now has the following sellin: ${this.items[i].sellIn}.`)
       }
       if (this.items[i].sellIn < 0) {
         if (this.items[i].name != "Aged Brie") {
@@ -56,7 +56,7 @@ export class GildedRose {
             if (this.items[i].quality > 0) {
               if (this.items[i].name != "Sulfuras, Hand of Ragnaros") {
                 this.items[i].quality = this.items[i].quality - 1;
-                // console.log(`This item : ${this.items[i].name} got removed 1 quality number and now has the following quality: ${this.items[i].quality}.`)
+                console.log(`This item : ${this.items[i].name} got removed 1 quality number and now has the following quality: ${this.items[i].quality}.`)
               }
             }
           } else {
@@ -65,7 +65,7 @@ export class GildedRose {
         } else {
           if (this.items[i].quality < 50) {
             this.items[i].quality = this.items[i].quality + 1;
-            // console.log(`This item : ${this.items[i].name} got added 1 quality number and now has the following quality: ${this.items[i].quality}.`)
+            console.log(`This item : ${this.items[i].name} got added 1 quality number and now has the following quality: ${this.items[i].quality}.`)
           }
         }
       }
